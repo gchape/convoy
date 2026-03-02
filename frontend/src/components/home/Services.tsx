@@ -12,8 +12,8 @@ export function Services() {
         transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
         className="flex items-center gap-3 mb-6"
       >
-        <span className="w-5 h-px bg-lime-400" />
-        <span className="text-[11px] font-semibold text-lime-400 uppercase tracking-widest">
+        <span className="w-5 h-px bg-orange-400" />
+        <span className="text-[11px] font-semibold text-orange-400 uppercase tracking-widest">
           Services
         </span>
       </motion.div>
@@ -25,7 +25,7 @@ export function Services() {
         transition={{ duration: 0.5, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
         className="text-3xl font-bold tracking-tight text-white/85 leading-tight mb-16 max-w-md"
       >
-        Everything your company needs,
+        Everything your delivery company needs,
         <br />
         <span className="text-zinc-500">nothing it doesn't.</span>
       </motion.h2>
@@ -44,8 +44,8 @@ export function Services() {
             }}
             className="group relative flex flex-col gap-5 p-7 bg-zinc-950 hover:bg-[#0d0d0f] transition-colors duration-200"
           >
-            <span className="absolute top-0 left-6 right-6 h-px bg-lime-400/0 group-hover:bg-lime-400/40 transition-all duration-300" />
-            <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-white/5 border border-white/[0.07] text-lime-400 group-hover:bg-lime-400/10 group-hover:border-lime-400/20 transition-all duration-200">
+            <span className="absolute top-0 left-6 right-6 h-px bg-orange-400/0 group-hover:bg-orange-400/40 transition-all duration-300" />
+            <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-white/5 border border-white/[0.07] text-orange-400 group-hover:bg-orange-400/10 group-hover:border-orange-400/20 transition-all duration-200">
               {s.icon}
             </div>
             <span className="text-[10px] font-bold text-zinc-600 tracking-widest uppercase">

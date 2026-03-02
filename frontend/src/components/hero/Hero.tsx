@@ -20,14 +20,14 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       >
-        <h1 className="text-5xl font-bold tracking-wider lg:tracking-tighter text-white/85 leading-none">
-          Build faster.
+        <h1 className="text-4xl font-bold tracking-wider lg:tracking-tighter text-white/85 leading-none">
+          Deliver smarter.
           <br />
-          Ship smarter.
+          Track in real time.
         </h1>
         <p className="mt-4 text-[15px] text-zinc-500 leading-relaxed max-w-md">
-          A minimal dashboard for teams who move fast. Everything you need,
-          nothing you don't.
+          The platform for delivery companies — register your fleet, set your
+          prices, and let customers place and track orders live on the map.
         </p>
       </motion.div>
     </section>

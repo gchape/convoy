@@ -13,11 +13,11 @@ export default function NotificationBell({
     <button
       aria-label="Notifications"
       onClick={onClick}
-      className="relative flex items-center justify-center w-9 h-9 rounded-lg border border-white/10 bg-zinc-900 text-zinc-500 cursor-pointer transition-all duration-150 hover:border-lime-400/30 hover:text-zinc-100 hover:bg-lime-400/5"
+      className="relative flex items-center justify-center w-9 h-9 rounded-lg border border-white/10 bg-zinc-900 text-zinc-500 cursor-pointer transition-all duration-150 hover:border-orange-400/30 hover:text-zinc-100 hover:bg-orange-400/5"
     >
       <span
         className={`absolute top-1.5 right-1.5 w-1.5 h-1.5 rounded-full border-2 border-solid border-[#18181b] ${
-          notifications.length > 0 ? "bg-lime-400 badge-pulse" : "bg-zinc-600"
+          notifications.length > 0 ? "bg-orange-400 badge-pulse" : "bg-zinc-600"
         }`}
       />
 

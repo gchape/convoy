@@ -13,8 +13,8 @@ export function Pricing() {
         transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
         className="flex items-center gap-3 mb-6"
       >
-        <span className="w-5 h-px bg-lime-400" />
-        <span className="text-[11px] font-semibold text-lime-400 uppercase tracking-widest">
+        <span className="w-5 h-px bg-orange-400" />
+        <span className="text-[11px] font-semibold text-orange-400 uppercase tracking-widest">
           Pricing
         </span>
       </motion.div>
@@ -26,9 +26,9 @@ export function Pricing() {
         transition={{ duration: 0.5, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
         className="text-3xl font-bold tracking-tight text-white/85 leading-tight mb-4 max-w-sm"
       >
-        Simple pricing,
+        Two simple models,
         <br />
-        <span className="text-zinc-500">no surprises.</span>
+        <span className="text-zinc-500">you choose.</span>
       </motion.h2>
 
       <motion.p
@@ -38,7 +38,8 @@ export function Pricing() {
         transition={{ duration: 0.5, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
         className="text-[13px] text-zinc-500 mb-16 max-w-sm"
       >
-        Start free, scale when you're ready. Cancel any time.
+        Start with zero commitment and pay per order, or switch to a flat
+        monthly rate once your volume grows.
       </motion.p>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -55,12 +56,12 @@ export function Pricing() {
             }}
             className={`relative flex flex-col rounded-xl border p-7 transition-all duration-200 ${
               plan.highlight
-                ? "bg-lime-400/4 border-lime-400/25 shadow-[0_0_40px_rgba(163,230,53,0.06)]"
+                ? "bg-orange-400/4 border-orange-400/25 shadow-[0_0_40px_rgba(251,146,60,0.08)]"
                 : "bg-zinc-950 border-white/[0.07] hover:border-white/12"
             }`}
           >
             {plan.highlight && (
-              <span className="absolute -top-3 left-1/2 -translate-x-1/2 inline-flex items-center px-3 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-widest bg-lime-400 text-zinc-950">
+              <span className="absolute -top-3 left-1/2 -translate-x-1/2 inline-flex items-center px-3 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-widest bg-orange-400 text-zinc-950">
                 Most popular
               </span>
             )}
@@ -71,7 +72,7 @@ export function Pricing() {
 
             <div className="flex items-end gap-1 mb-2">
               <span
-                className={`text-4xl font-bold tracking-tight ${plan.highlight ? "text-lime-400" : "text-zinc-100"}`}
+                className={`text-4xl font-bold tracking-tight ${plan.highlight ? "text-orange-400" : "text-zinc-100"}`}
               >
                 {plan.price}
               </span>
@@ -97,7 +98,7 @@ export function Pricing() {
                     height="13"
                     viewBox="0 0 24 24"
                     fill="none"
-                    stroke={plan.highlight ? "#a3e635" : "#52525b"}
+                    stroke={plan.highlight ? "#fb923c" : "#52525b"}
                     strokeWidth="2.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -113,7 +114,7 @@ export function Pricing() {
               to="/get-started"
               className={`flex items-center justify-center h-10 rounded-lg text-[12px] font-bold uppercase tracking-widest transition-all duration-150 ${
                 plan.highlight
-                  ? "bg-lime-400 text-zinc-950 hover:opacity-90 hover:shadow-[0_0_20px_rgba(163,230,53,0.25)]"
+                  ? "bg-orange-400 text-zinc-950 hover:opacity-90 hover:shadow-[0_0_20px_rgba(251,146,60,0.3)]"
                   : "bg-white/5 text-zinc-400 border border-white/8 hover:text-zinc-100 hover:bg-white/10"
               }`}
             >

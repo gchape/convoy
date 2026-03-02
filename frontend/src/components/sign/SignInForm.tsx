@@ -16,7 +16,7 @@ const SignInForm = () => (
         placeholder="you@example.com"
         title="Please enter a valid email address."
         aria-describedby="emailHelp"
-        className="h-10.5 bg-zinc-900 border border-white/8 rounded-[9px] px-3.5 text-[13px] text-zinc-100 placeholder-zinc-700 outline-none transition-colors duration-150 focus:border-lime-400/40 focus:shadow-[0_0_0_3px_rgba(163,230,53,0.07)] invalid:border-red-900"
+        className="h-10.5 bg-zinc-900 border border-white/8 rounded-[9px] px-3.5 text-[13px] text-zinc-100 placeholder-zinc-700 outline-none transition-colors duration-150 focus:border-orange-400/40 focus:shadow-[0_0_0_3px_rgba(251,146,60,0.07)] invalid:border-red-900"
       />
       <p id="emailHelp" className="text-xs text-zinc-500">
         Enter a valid email (e.g., you@example.com).
@@ -37,7 +37,7 @@ const SignInForm = () => (
         placeholder="••••••••"
         pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
         title="Password must contain at least 1 uppercase letter, 1 special symbol, 1 number and be at least 8 characters long."
-        className="h-10.5 bg-zinc-900 border border-white/8 rounded-[9px] px-3.5 text-[13px] text-zinc-100 placeholder-zinc-700 outline-none transition-colors duration-150 focus:border-lime-400/40 focus:shadow-[0_0_0_3px_rgba(163,230,53,0.07)] invalid:border-red-900"
+        className="h-10.5 bg-zinc-900 border border-white/8 rounded-[9px] px-3.5 text-[13px] text-zinc-100 placeholder-zinc-700 outline-none transition-colors duration-150 focus:border-orange-400/40 focus:shadow-[0_0_0_3px_rgba(251,146,60,0.07)] invalid:border-red-900"
       />
     </div>
 
@@ -45,14 +45,14 @@ const SignInForm = () => (
       <label className="flex items-center gap-2 text-[12px] text-zinc-500 cursor-pointer">
         <input
           type="checkbox"
-          className="accent-lime-400 rounded"
+          className="accent-orange-400 rounded"
           defaultChecked
         />
         Remember me
       </label>
       <NavLink
         to="/forgot-password"
-        className="text-[12px] text-zinc-500 hover:text-lime-400 transition-colors duration-150"
+        className="text-[12px] text-zinc-500 hover:text-orange-400 transition-colors duration-150"
       >
         Forgot password?
       </NavLink>
@@ -60,7 +60,7 @@ const SignInForm = () => (
 
     <button
       type="submit"
-      className="w-full h-10.5 bg-lime-400 text-zinc-950 text-[12px] font-bold uppercase tracking-widest rounded-[9px] mb-7 cursor-pointer transition-all duration-150 hover:opacity-90 hover:shadow-[0_0_20px_rgba(163,230,53,0.25)]"
+      className="w-full h-10.5 bg-orange-400 text-zinc-950 text-[12px] font-bold uppercase tracking-widest rounded-[9px] mb-7 cursor-pointer transition-all duration-150 hover:opacity-90 hover:shadow-[0_0_20px_rgba(251,146,60,0.3)]"
     >
       Sign in
     </button>

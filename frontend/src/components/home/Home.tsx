@@ -11,7 +11,7 @@ const Home = () => (
       <Hero />
       <ScrollRings />
     </div>
-    <div className="flex flex-col justify-around gap-24 lg:gap-24 pb-24 px-5 lg:px-12">
+    <div className="flex flex-col justify-around gap-24 lg:gap-24 pb-10 px-5 lg:px-12">
       <Services />
       <HowItWorks />
       <Pricing />

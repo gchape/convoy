@@ -20,7 +20,7 @@ export default function NotificationDropdown({
           "0 20px 60px rgba(0,0,0,.65), 0 0 0 1px rgba(255,255,255,0.04)",
       }}
     >
-      <div className="px-4 py-3 border-b border-white/10 bg-lime-400/5 flex items-center justify-between">
+      <div className="px-4 py-3 border-b border-white/10 bg-orange-400/5 flex items-center justify-between">
         <div>
           <p className="text-[13px] font-bold text-zinc-100 tracking-tight">
             Notifications
@@ -32,7 +32,7 @@ export default function NotificationDropdown({
           </p>
         </div>
         {notifications.length > 0 && (
-          <span className="inline-flex items-center justify-center h-5 min-w-5 px-1.5 rounded-full bg-lime-400/15 text-lime-400 text-[10px] font-bold tabular-nums border border-lime-400/20">
+          <span className="inline-flex items-center justify-center h-5 min-w-5 px-1.5 rounded-full bg-orange-400/15 text-orange-400 text-[10px] font-bold tabular-nums border border-orange-400/20">
             {notifications.length}
           </span>
         )}

@@ -30,7 +30,7 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "/get-started",
+    path: "/sign-in",
     Component: SignIn,
   },
   {

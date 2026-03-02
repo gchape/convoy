@@ -1,12 +1,17 @@
 import type { MenuEntry, Shape } from "../types";
 
 export const links = [
-  { label: "Docs", to: "/docs" },
   { label: "About", to: "/about" },
   { label: "Contact", to: "/contact" },
+  { label: "Sign in", to: "/sign-in" },
 ];
 
 export const rings = [
+  {
+    id: "services",
+    label: "Services",
+    target: "services",
+  },
   {
     id: "how-it-works",
     label: "How it works",
@@ -106,7 +111,7 @@ export const shapes: Shape[] = [
     style: { top: "10%", right: "8%", width: 180, height: 180 },
     animate: { rotate: [0, 90, 180, 270, 360] },
     transition: { duration: 28, repeat: Infinity, ease: "linear" },
-    stroke: "rgba(163,230,53,0.12)",
+    stroke: "rgba(255,92,26,0.1)",
     strokeWidth: 1,
   },
   {
@@ -124,7 +129,7 @@ export const shapes: Shape[] = [
     style: { top: "20%", right: "2%", width: 100, height: 100 },
     animate: { scale: [1, 1.08, 1], opacity: [0.5, 1, 0.5] },
     transition: { duration: 6, repeat: Infinity, ease: "easeInOut" },
-    stroke: "rgba(163,230,53,0.15)",
+    stroke: "rgba(255,92,26,0.15)",
     strokeWidth: 1,
     strokeDasharray: "6 8",
   },
@@ -144,7 +149,7 @@ export const shapes: Shape[] = [
     style: { top: "8%", right: "30%", width: 20, height: 20 },
     animate: { opacity: [0.3, 0.8, 0.3], scale: [0.9, 1.1, 0.9] },
     transition: { duration: 4, repeat: Infinity, ease: "easeInOut" },
-    stroke: "rgba(163,230,53,0.4)",
+    stroke: "rgba(255,92,26,0.4)",
     strokeWidth: 1.5,
   },
   {
@@ -167,8 +172,8 @@ export const shapes: Shape[] = [
     style: { top: "44%", right: "5%", width: 32, height: 32 },
     animate: { rotate: [45, 135, 225, 315, 405], opacity: [0.4, 0.9, 0.4] },
     transition: { duration: 8, repeat: Infinity, ease: "easeInOut" },
-    stroke: "rgba(163,230,53,0.25)",
-    fill: "rgba(163,230,53,0.04)",
+    stroke: "rgba(255,92,26,0.25)",
+    fill: "rgba(255,92,26,0.04)",
     strokeWidth: 1,
   },
   {
@@ -177,7 +182,7 @@ export const shapes: Shape[] = [
     style: { bottom: "-10%", right: "-5%", width: 300, height: 300 },
     animate: { scale: [1, 1.04, 1], opacity: [0.15, 0.3, 0.15] },
     transition: { duration: 12, repeat: Infinity, ease: "easeInOut" },
-    stroke: "rgba(163,230,53,0.08)",
+    stroke: "rgba(255,92,26,0.08)",
     strokeWidth: 1,
   },
 ];
@@ -186,9 +191,9 @@ export const steps = [
   {
     id: "step1",
     number: "01",
-    title: "Create your company",
+    title: "Register your company",
     description:
-      "Register your organisation, configure your workspace, and invite your first admins. Takes under two minutes.",
+      "Sign up, configure your delivery company profile, set your service regions and pricing. Live in minutes.",
     icon: (
       <svg
         width="20"
@@ -208,9 +213,9 @@ export const steps = [
   {
     id: "step2",
     number: "02",
-    title: "Add employees",
+    title: "Add your drivers",
     description:
-      "Onboard your team, define their roles and salaries, and group them into departments or projects.",
+      "Onboard your delivery team, assign roles and regions, and manage your fleet from one central dashboard.",
     icon: (
       <svg
         width="20"
@@ -232,9 +237,9 @@ export const steps = [
   {
     id: "step3",
     number: "03",
-    title: "Assign & track",
+    title: "Receive & deliver orders",
     description:
-      "Create projects, break them into tasks, assign ownership, and monitor everything from one dashboard.",
+      "Customers place delivery requests. Your team picks up, tracks in real time, and delivers — customers follow every step on the map.",
     icon: (
       <svg
         width="20"
@@ -252,108 +257,13 @@ export const steps = [
   },
 ];
 
-export const features = [
-  {
-    id: "tasks",
-    label: "01",
-    title: "Task Assignment",
-    description:
-      "Assign tasks to any employee across any project. Set priorities, deadlines, and track progress in real time.",
-    icon: (
-      <svg
-        width="18"
-        height="18"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M9 11l3 3L22 4" />
-        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
-      </svg>
-    ),
-  },
-  {
-    id: "employees",
-    label: "02",
-    title: "Employee Management",
-    description:
-      "Onboard employees, define roles, set permissions, and organise teams under your company structure.",
-    icon: (
-      <svg
-        width="18"
-        height="18"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-        <circle cx="9" cy="7" r="4" />
-        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-      </svg>
-    ),
-  },
-  {
-    id: "projects",
-    label: "03",
-    title: "Project Overview",
-    description:
-      "See every project at a glance. Track milestones, monitor workloads, and keep deliverables on schedule.",
-    icon: (
-      <svg
-        width="18"
-        height="18"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <rect x="3" y="3" width="7" height="7" />
-        <rect x="14" y="3" width="7" height="7" />
-        <rect x="14" y="14" width="7" height="7" />
-        <rect x="3" y="14" width="7" height="7" />
-      </svg>
-    ),
-  },
-  {
-    id: "salary",
-    label: "04",
-    title: "Salary Management",
-    description:
-      "Define pay structures per role, track payroll cycles, and keep compensation data centralised and auditable.",
-    icon: (
-      <svg
-        width="18"
-        height="18"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <line x1="12" y1="1" x2="12" y2="23" />
-        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-      </svg>
-    ),
-  },
-];
-
 export const services = [
   {
-    id: "tasks",
+    id: "orders",
     label: "01",
-    title: "Task Assignment",
+    title: "Order Management",
     description:
-      "Assign tasks to any employee across any project. Set priorities, deadlines, and track progress in real time.",
+      "Customers submit delivery requests with pickup and drop-off addresses. Your team receives, assigns, and manages every order in one place.",
     icon: (
       <svg
         width="18"
@@ -371,11 +281,11 @@ export const services = [
     ),
   },
   {
-    id: "employees",
+    id: "tracking",
     label: "02",
-    title: "Employee Management",
+    title: "Live GPS Tracking",
     description:
-      "Onboard employees, define roles, set permissions, and organise teams under your company structure.",
+      "Customers track their delivery on a live map from pickup to drop-off. Real-time driver location, route display, and ETA — always up to date.",
     icon: (
       <svg
         width="18"
@@ -387,19 +297,17 @@ export const services = [
         strokeLinecap="round"
         strokeLinejoin="round"
       >
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-        <circle cx="9" cy="7" r="4" />
-        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+        <circle cx="12" cy="12" r="10" />
+        <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
       </svg>
     ),
   },
   {
-    id: "projects",
+    id: "status",
     label: "03",
-    title: "Project Overview",
+    title: "Order Status & ETA",
     description:
-      "See every project at a glance. Track milestones, monitor workloads, and keep deliverables on schedule.",
+      "Every order flows through clear states — Ordered, In Progress, Delivered. Customers always know where their parcel is and when it arrives.",
     icon: (
       <svg
         width="18"
@@ -411,19 +319,17 @@ export const services = [
         strokeLinecap="round"
         strokeLinejoin="round"
       >
-        <rect x="3" y="3" width="7" height="7" />
-        <rect x="14" y="3" width="7" height="7" />
-        <rect x="14" y="14" width="7" height="7" />
-        <rect x="3" y="14" width="7" height="7" />
+        <circle cx="12" cy="12" r="10" />
+        <polyline points="12 6 12 12 16 14" />
       </svg>
     ),
   },
   {
-    id: "salary",
+    id: "pricing",
     label: "04",
-    title: "Salary Management",
+    title: "Region-Based Pricing",
     description:
-      "Define pay structures per role, track payroll cycles, and keep compensation data centralised and auditable.",
+      "Each company sets fixed delivery prices per region. Customers see the exact price before confirming — no hidden fees, no surprises.",
     icon: (
       <svg
         width="18"
@@ -444,32 +350,36 @@ export const services = [
 
 export const plans = [
   {
-    id: "starter",
-    name: "Starter",
-    price: "Free",
-    period: null,
-    description: "For small teams getting started.",
+    id: "commission",
+    name: "Pay per order",
+    price: "5%",
+    period: "per order",
+    description:
+      "No upfront cost. We take a small commission on each delivery you complete.",
     highlight: false,
     features: [
-      "Up to 5 employees",
-      "2 active projects",
-      "Task assignment",
-      "Basic reporting",
+      "Unlimited employees",
+      "Unlimited orders",
+      "Live GPS tracking",
+      "Order status & ETA",
+      "Region-based pricing",
       "Email support",
     ],
   },
   {
-    id: "pro",
-    name: "Pro",
-    price: "$29",
+    id: "flat",
+    name: "Flat monthly",
+    price: "₾100",
     period: "/ month",
-    description: "For growing companies that need more.",
+    description:
+      "One predictable monthly fee. Keep 100% of every delivery you earn.",
     highlight: true,
     features: [
-      "Up to 50 employees",
-      "Unlimited projects",
-      "Salary management",
-      "Advanced analytics",
+      "Unlimited employees",
+      "Unlimited orders",
+      "Live GPS tracking",
+      "Order status & ETA",
+      "Region-based pricing",
       "Priority support",
     ],
   },
@@ -478,14 +388,14 @@ export const plans = [
     name: "Enterprise",
     price: "Custom",
     period: null,
-    description: "For large organisations with complex needs.",
+    description: "Large fleets and custom needs. Let's talk.",
     highlight: false,
     features: [
-      "Unlimited employees",
-      "Unlimited projects",
-      "Custom roles & permissions",
-      "SSO & audit logs",
-      "Dedicated support",
+      "Everything in Flat monthly",
+      "Custom integrations",
+      "Dedicated account manager",
+      "SLA guarantees",
+      "White-label option",
     ],
   },
 ];

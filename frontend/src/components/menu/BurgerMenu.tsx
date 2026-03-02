@@ -11,7 +11,7 @@ export default function BurgerMenu({ isOpen, onClick }: BurgerMenuProps) {
       onClick={onClick}
       aria-label={isOpen ? "Close menu" : "Open menu"}
       aria-expanded={isOpen}
-      className="md:hidden flex flex-col justify-center p-2 border border-white/10 rounded-lg bg-transparent cursor-pointer transition-colors duration-150 hover:border-lime-400/30"
+      className="md:hidden flex flex-col justify-center p-2 border border-white/10 rounded-lg bg-transparent cursor-pointer transition-colors duration-150 hover:border-orange-400/30"
       style={{ gap: 5 }}
     >
       {[
@@ -27,7 +27,7 @@ export default function BurgerMenu({ isOpen, onClick }: BurgerMenuProps) {
             height: 2,
             transform,
             opacity: i === 1 && isOpen ? 0 : 1,
-            background: isOpen ? "#a3e635" : "rgba(244,244,245,.6)",
+            background: isOpen ? "#fb923c" : "rgba(244,244,245,.6)",
           }}
         />
       ))}

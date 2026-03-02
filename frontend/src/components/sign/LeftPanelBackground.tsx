@@ -25,7 +25,7 @@ const LeftPanelBackground = () => (
       className="absolute top-0 left-0 right-0 h-64 z-0 pointer-events-none"
       style={{
         background:
-          "radial-gradient(ellipse 80% 100% at 50% 0%, rgba(163,230,53,0.07) 0%, transparent 70%)",
+          "radial-gradient(ellipse 80% 100% at 50% 0%, rgba(255,92,26,0.07) 0%, transparent 70%)",
       }}
     />
 
@@ -33,7 +33,7 @@ const LeftPanelBackground = () => (
       className="absolute top-0 left-0 right-0 h-px z-10"
       style={{
         background:
-          "linear-gradient(90deg, transparent, rgba(163,230,53,0.5) 40%, rgba(163,230,53,0.5) 60%, transparent)",
+          "linear-gradient(90deg, transparent, rgba(251,146,60,0.5) 40%, rgba(251,146,60,0.5) 60%, transparent)",
       }}
     />
   </>

@@ -12,10 +12,12 @@ export default function MobileMenu() {
           className={({ isActive }) =>
             [
               "flex items-center justify-between",
-              "text-xs font-semibold uppercase tracking-widest",
+              "text-xs font-semibold tracking-widest",
               "py-3 border-b border-white/5 no-underline last:border-b-0",
               "transition-colors duration-150",
-              isActive ? "text-lime-400" : "text-zinc-400 hover:text-zinc-100",
+              isActive
+                ? "text-orange-400"
+                : "text-zinc-400 hover:text-zinc-100",
             ].join(" ")
           }
         >

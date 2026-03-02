@@ -16,7 +16,6 @@ export default function UserMenu({ user }: UserMenuProps) {
         setOpen(false);
       }
     };
-
     document.addEventListener("mousedown", handler);
     return () => document.removeEventListener("mousedown", handler);
   }, []);
@@ -25,7 +24,7 @@ export default function UserMenu({ user }: UserMenuProps) {
     <div ref={ref} className="relative">
       <button
         onClick={() => setOpen((o) => !o)}
-        className="flex items-center gap-2 pl-3 pr-2 py-1 rounded-full border border-white/10 bg-zinc-900 cursor-pointer transition-colors duration-150 hover:border-lime-400/30 hover:bg-lime-400/5"
+        className="flex items-center gap-2 pl-3 pr-2 py-1 rounded-full border border-white/10 bg-zinc-900 cursor-pointer transition-colors duration-150 hover:border-orange-400/30 hover:bg-orange-400/5"
       >
         <span className="hidden sm:block text-[12px] text-zinc-400 font-mono tracking-wide">
           {user.shortName}
@@ -33,7 +32,7 @@ export default function UserMenu({ user }: UserMenuProps) {
 
         <div
           className="w-7 h-7 rounded-full flex items-center justify-center text-[11px] font-bold text-zinc-900 select-none shrink-0"
-          style={{ background: "linear-gradient(135deg, #a3e635, #22d3ee)" }}
+          style={{ background: "linear-gradient(135deg, #FF5C1A, #FFAA00)" }}
         >
           {user.initials}
         </div>

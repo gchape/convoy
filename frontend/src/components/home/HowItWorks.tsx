@@ -12,8 +12,8 @@ export function HowItWorks() {
         transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
         className="flex items-center gap-3 mb-6"
       >
-        <span className="w-5 h-px bg-lime-400" />
-        <span className="text-[11px] font-semibold text-lime-400 uppercase tracking-widest">
+        <span className="w-5 h-px bg-orange-400" />
+        <span className="text-[11px] font-semibold text-orange-400 uppercase tracking-widest">
           How it works
         </span>
       </motion.div>
@@ -44,9 +44,9 @@ export function HowItWorks() {
             }}
             className="relative flex-1 flex flex-col items-center gap-6 px-0 pb-12 lg:px-10 lg:items-start lg:pb-0"
           >
-            <div className="relative z-10 flex items-center justify-center w-9 h-9 rounded-full bg-zinc-900 border border-white/8 text-lime-400 shrink-0">
+            <div className="relative z-10 flex items-center justify-center w-9 h-9 rounded-full bg-zinc-900 border border-white/8 text-orange-400 shrink-0">
               {step.icon}
-              <span className="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-lime-400 border-2 border-[#09090b]" />
+              <span className="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-orange-400 border-2 border-[#09090b]" />
             </div>
 
             <span className="text-[10px] font-bold text-zinc-700 tracking-widest uppercase">

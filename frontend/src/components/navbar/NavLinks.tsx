@@ -19,10 +19,10 @@ export default function NavLinks() {
             to={to}
             onClick={handleHashClick(to)}
             className={({ isActive }) =>
-              `nav-underline relative px-3 py-1.5 text-[12px] font-semibold uppercase tracking-widest rounded-md transition-colors duration-150 ${
+              `nav-underline relative px-3 py-1.5 text-xs font-semibold tracking-widest rounded-md transition-colors duration-150 ${
                 isActive
-                  ? "text-zinc-100"
-                  : "text-zinc-500 hover:text-zinc-100 hover:bg-white/5"
+                  ? "text-orange-400"
+                  : "text-zinc-400 hover:text-zinc-100 hover:bg-white/5"
               }`
             }
           >
