@@ -1,39 +1,21 @@
-import { useEffect, useRef, useState } from "react";
-import UserDropdown from "./UserDropdown";
+import React from "react";
 import type { User } from "../../types";
+import UserSettings from "./UserSettings";
 
-type UserMenuProps = {
-  user: User;
-};
-
-export default function UserMenu({ user }: UserMenuProps) {
-  const [open, setOpen] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handler = (e: MouseEvent) => {
-      if (ref.current && !ref.current.contains(e.target as Node)) {
-        setOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handler);
-    return () => document.removeEventListener("mousedown", handler);
-  }, []);
+export default function UserMenu({ user }: { user: User }) {
+  const [open, setOpen] = React.useState<boolean>(false);
 
   return (
-    <div ref={ref} className="relative">
+    <div className="relative text-[13px] font-[Bricolage_Grotesque,sans-serif] font-bold tracking-normal">
       <button
-        onClick={() => setOpen((o) => !o)}
+        onClick={() => setOpen((prev) => !prev)}
         className="flex items-center gap-2 pl-3 pr-2 py-1 rounded-full border border-white/10 bg-zinc-900 cursor-pointer transition-colors duration-150 hover:border-orange-400/30 hover:bg-orange-400/5"
       >
-        <span className="hidden sm:block text-[12px] text-zinc-400 font-mono tracking-wide">
+        <span className="hidden sm:block text-zinc-400">
           {user.shortName}
         </span>
 
-        <div
-          className="w-7 h-7 rounded-full flex items-center justify-center text-[11px] font-bold text-zinc-900 select-none shrink-0"
-          style={{ background: "linear-gradient(135deg, #FF5C1A, #FFAA00)" }}
-        >
+        <div className="w-7 h-7 rounded-full flex items-center justify-center text-[12px] text-zinc-900 select-none shrink-0 bg-linear-to-br from-[#FF5C1A] to-[#FFAA00]">
           {user.initials}
         </div>
 
@@ -51,7 +33,7 @@ export default function UserMenu({ user }: UserMenuProps) {
         </svg>
       </button>
 
-      {open && <UserDropdown onClick={() => setOpen(false)} user={user} />}
+      {open && <UserSettings />}
     </div>
   );
 }

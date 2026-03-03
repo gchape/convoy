@@ -38,6 +38,7 @@ function Geometry({ shape }: { shape: Shape }) {
           strokeWidth={strokeWidth}
         />
       )}
+
       {type === "circle" && (
         <circle
           cx={w / 2}
@@ -49,6 +50,7 @@ function Geometry({ shape }: { shape: Shape }) {
           strokeDasharray={strokeDasharray}
         />
       )}
+      
       {type === "plus" && (
         <g stroke={stroke} strokeWidth={strokeWidth} strokeLinecap="round">
           <line x1={w / 2} y1="0" x2={w / 2} y2={h} />

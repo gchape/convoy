@@ -1,9 +1,9 @@
 "use client";
 import Hero from "../hero/Hero";
-import { HowItWorks } from "./HowItWorks";
-import { Pricing } from "./Pricing";
-import { ScrollRings } from "./ScrollRings";
-import { Services } from "./Services";
+import { HowItWorks } from "../section/HowItWorks";
+import { Pricing } from "../section/Pricing";
+import { Services } from "../section/Services";
+import ScrollRings from "./ScrollRings";
 
 const Home = () => (
   <div className="flex flex-col mx-4 border-l-2 border-l-white/8 border-r-2 border-r-white/6 border-dashed">

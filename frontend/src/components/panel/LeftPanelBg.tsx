@@ -1,4 +1,4 @@
-const LeftPanelBackground = () => (
+const LeftPanelBg = () => (
   <>
     <div
       className="absolute inset-0 z-0"
@@ -39,4 +39,4 @@ const LeftPanelBackground = () => (
   </>
 );
 
-export default LeftPanelBackground;
+export default LeftPanelBg;

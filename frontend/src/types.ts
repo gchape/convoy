@@ -20,14 +20,6 @@ export type User = {
   shortName: string;
 };
 
-export type Notification = {
-  id: number;
-  text: string;
-  title: string;
-  author: string;
-  timestamp: Date;
-};
-
 export interface Shape {
   id: string;
   type: "rect" | "circle" | "plus";
@@ -39,3 +31,15 @@ export interface Shape {
   strokeWidth: number;
   strokeDasharray?: string;
 }
+
+type Feature = Array<string>;
+
+export type Plan = {
+  id: string;
+  name: string;
+  price: string;
+  period: string | null;
+  description: string;
+  highlight: boolean;
+  features: Feature;
+};

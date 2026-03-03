@@ -1,6 +1,6 @@
-import { NavLink } from "react-router";
+import { Link } from "react-router";
 
-const SignInForm = () => (
+const SigninForm = () => (
   <form method="post">
     <div className="flex flex-col gap-1.5 mb-5">
       <label
@@ -9,6 +9,7 @@ const SignInForm = () => (
       >
         Email address
       </label>
+
       <input
         required
         type="email"
@@ -18,6 +19,7 @@ const SignInForm = () => (
         aria-describedby="emailHelp"
         className="h-10.5 bg-zinc-900 border border-white/8 rounded-[9px] px-3.5 text-[13px] text-zinc-100 placeholder-zinc-700 outline-none transition-colors duration-150 focus:border-orange-400/40 focus:shadow-[0_0_0_3px_rgba(251,146,60,0.07)] invalid:border-red-900"
       />
+
       <p id="emailHelp" className="text-xs text-zinc-500">
         Enter a valid email (e.g., you@example.com).
       </p>
@@ -30,6 +32,7 @@ const SignInForm = () => (
       >
         Password
       </label>
+
       <input
         required
         id="password"
@@ -50,12 +53,13 @@ const SignInForm = () => (
         />
         Remember me
       </label>
-      <NavLink
+
+      <Link
         to="/forgot-password"
         className="text-[12px] text-zinc-500 hover:text-orange-400 transition-colors duration-150"
       >
         Forgot password?
-      </NavLink>
+      </Link>
     </div>
 
     <button
@@ -67,4 +71,4 @@ const SignInForm = () => (
   </form>
 );
 
-export default SignInForm;
+export default SigninForm;

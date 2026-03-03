@@ -23,8 +23,10 @@ export default function Hero() {
         <h1 className="text-4xl font-bold tracking-wider lg:tracking-tighter text-white/85 leading-none">
           Deliver smarter.
           <br />
+
           Track in real time.
         </h1>
+        
         <p className="mt-4 text-[15px] text-zinc-500 leading-relaxed max-w-md">
           The platform for delivery companies — register your fleet, set your
           prices, and let customers place and track orders live on the map.

@@ -1,6 +1,6 @@
-import type { MenuEntry, Shape } from "../types";
+import type { MenuEntry, Plan, Shape } from "../types";
 
-export const links = [
+export const navlinks = [
   { label: "About", to: "/about" },
   { label: "Contact", to: "/contact" },
   { label: "Sign in", to: "/sign-in" },
@@ -25,26 +25,6 @@ export const rings = [
 ];
 
 export const items: MenuEntry[] = [
-  {
-    label: "Dashboard",
-    icon: (
-      <svg
-        width="14"
-        height="14"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2.2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <rect x="3" y="3" width="7" height="7" />
-        <rect x="14" y="3" width="7" height="7" />
-        <rect x="14" y="14" width="7" height="7" />
-        <rect x="3" y="14" width="7" height="7" />
-      </svg>
-    ),
-  },
   {
     label: "Settings",
     icon: (
@@ -78,6 +58,26 @@ export const items: MenuEntry[] = [
       >
         <line x1="12" y1="1" x2="12" y2="23" />
         <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+      </svg>
+    ),
+  },
+  {
+    label: "Dashboard",
+    icon: (
+      <svg
+        width="14"
+        height="14"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <rect x="3" y="3" width="7" height="7" />
+        <rect x="14" y="3" width="7" height="7" />
+        <rect x="14" y="14" width="7" height="7" />
+        <rect x="3" y="14" width="7" height="7" />
       </svg>
     ),
   },
@@ -348,7 +348,7 @@ export const services = [
   },
 ];
 
-export const plans = [
+export const plans: Plan[] = [
   {
     id: "commission",
     name: "Pay per order",

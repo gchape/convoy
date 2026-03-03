@@ -1,23 +1,24 @@
 "use client";
+import React from "react";
+import { createPortal } from "react-dom";
+import MobileMenu from "./MobileMenu";
 
-type BurgerMenuProps = {
-  isOpen: boolean;
-  onClick: () => void;
-};
+export default function BurgerMenu() {
+  const [isOpen, setOpen] = React.useState<boolean>(false);
 
-export default function BurgerMenu({ isOpen, onClick }: BurgerMenuProps) {
   return (
     <button
-      onClick={onClick}
-      aria-label={isOpen ? "Close menu" : "Open menu"}
+      type="button"
       aria-expanded={isOpen}
+      aria-label={isOpen ? "Close menu" : "Open menu"}
+      onClick={() => setOpen((prev) => !prev)}
       className="md:hidden flex flex-col justify-center p-2 border border-white/10 rounded-lg bg-transparent cursor-pointer transition-colors duration-150 hover:border-orange-400/30"
       style={{ gap: 5 }}
     >
       {[
-        isOpen ? "translateY(7px) rotate(45deg)" : "none",
-        isOpen ? "scaleX(0)" : "none",
-        isOpen ? "translateY(-7px) rotate(-45deg)" : "none",
+        "translateY(7px) rotate(45deg)",
+        "scaleX(0)",
+        "translateY(-7px) rotate(-45deg)",
       ].map((transform, i) => (
         <span
           key={i}
@@ -25,12 +26,14 @@ export default function BurgerMenu({ isOpen, onClick }: BurgerMenuProps) {
           style={{
             width: 18,
             height: 2,
-            transform,
+            transform: isOpen ? transform : "none",
             opacity: i === 1 && isOpen ? 0 : 1,
             background: isOpen ? "#fb923c" : "rgba(244,244,245,.6)",
           }}
         />
       ))}
+
+      {isOpen && createPortal(<MobileMenu />, document.querySelector("nav")!)}
     </button>
   );
 }

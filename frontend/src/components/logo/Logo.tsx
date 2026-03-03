@@ -29,9 +29,8 @@ export default function Logo() {
           y="25"
           fill="#FFFFFF"
           style={{
-            fontFamily: "Black Ops One, system-ui",
             fontSize: "24px",
-            fontWeight: 900,
+            fontFamily: "Black Ops One, system-ui",
             textTransform: "uppercase",
             letterSpacing: "-0.02em",
           }}

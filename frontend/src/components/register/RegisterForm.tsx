@@ -1,56 +1,54 @@
-import { NavLink } from "react-router";
-
-const inputClass =
-  "h-10.5 bg-zinc-900 border border-white/8 rounded-[9px] px-3.5 text-[13px] text-zinc-100 placeholder-zinc-700 outline-none transition-colors duration-150 focus:border-orange-400/40 focus:shadow-[0_0_0_3px_rgba(251,146,60,0.07)] invalid:border-red-900";
-
-const labelClass =
-  "text-[11px] font-semibold text-zinc-500 uppercase tracking-widest";
+import { Link } from "react-router";
 
 const RegisterForm = () => (
   <form method="post" className="w-full">
     <div className="flex flex-col gap-1.5 mb-5">
-      <label htmlFor="firstName" className={labelClass}>
+      <label htmlFor="firstName" className="label">
         First name
       </label>
+
       <input
         required
         type="text"
         id="firstName"
         placeholder="Jane"
-        className={inputClass}
+        className="input"
       />
     </div>
 
     <div className="flex flex-col gap-1.5 mb-5">
-      <label htmlFor="lastName" className={labelClass}>
+      <label htmlFor="lastName" className="label">
         Last name
       </label>
+
       <input
         required
         type="text"
         id="lastName"
         placeholder="Smith"
-        className={inputClass}
+        className="input"
       />
     </div>
 
     <div className="flex flex-col gap-1.5 mb-5">
-      <label htmlFor="company" className={labelClass}>
+      <label htmlFor="company" className="label">
         Company name
       </label>
+
       <input
         required
         type="text"
         id="company"
         placeholder="Fast Courier LLC"
-        className={inputClass}
+        className="input"
       />
     </div>
 
     <div className="flex flex-col gap-1.5 mb-5">
-      <label htmlFor="email" className={labelClass}>
+      <label htmlFor="email" className="label">
         Email address
       </label>
+
       <input
         required
         type="email"
@@ -58,17 +56,19 @@ const RegisterForm = () => (
         placeholder="you@example.com"
         title="Please enter a valid email address."
         aria-describedby="emailHelp"
-        className={inputClass}
+        className="input"
       />
+
       <p id="emailHelp" className="text-xs text-zinc-500">
         Enter a valid email (e.g., you@example.com).
       </p>
     </div>
 
     <div className="flex flex-col gap-1.5 mb-5">
-      <label htmlFor="password" className={labelClass}>
+      <label htmlFor="password" className="label">
         Password
       </label>
+
       <input
         required
         id="password"
@@ -77,8 +77,9 @@ const RegisterForm = () => (
         pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
         title="Min. 8 characters with uppercase, number and special symbol."
         aria-describedby="passwordHelp"
-        className={inputClass}
+        className="input"
       />
+
       <p id="passwordHelp" className="text-xs text-zinc-500">
         Min. 8 characters with uppercase, number and special symbol.
       </p>
@@ -91,15 +92,16 @@ const RegisterForm = () => (
         type="checkbox"
         className="accent-orange-400 rounded mt-0.5 shrink-0"
       />
+
       <span>
         I agree to the{" "}
-        <NavLink to="/terms" className="text-orange-400 hover:underline">
+        <Link to="/terms" className="text-orange-400 hover:underline">
           Terms of Service
-        </NavLink>{" "}
+        </Link>{" "}
         and{" "}
-        <NavLink to="/privacy" className="text-orange-400 hover:underline">
+        <Link to="/privacy" className="text-orange-400 hover:underline">
           Privacy Policy
-        </NavLink>
+        </Link>
       </span>
     </label>
 

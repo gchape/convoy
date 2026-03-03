@@ -1,12 +1,11 @@
 import { createRoot } from "react-dom/client";
-import { RouterProvider } from "react-router/dom";
 import { createBrowserRouter } from "react-router";
-import NavBar from "./components/navbar/NavBar.tsx";
-import { UserProvider } from "./features/context/UserContext.tsx";
-import { NotificationsProvider } from "./features/context/NotificationContext.tsx";
-import SignIn from "./components/sign/SignIn.tsx";
+import { RouterProvider } from "react-router/dom";
 import Home from "./components/home/Home.tsx";
+import NavBar from "./components/navbar/NavBar.tsx";
 import RegisterForm from "./components/register/Register.tsx";
+import Signin from "./components/sign/Signin.tsx";
+import { UserProvider } from "./features/context/UserContext.tsx";
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -31,7 +30,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/sign-in",
-    Component: SignIn,
+    Component: Signin,
   },
   {
     path: "/register",
@@ -41,8 +40,6 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")!).render(
   <UserProvider>
-    <NotificationsProvider>
-      <RouterProvider router={router} />
-    </NotificationsProvider>
+    <RouterProvider router={router} />
   </UserProvider>,
 );

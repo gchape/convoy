@@ -1,34 +1,14 @@
 "use client";
 import { motion } from "motion/react";
 import { steps } from "../constants";
+import SectionIntro from "./components/SectionIntro";
+import SectionHeader from "./components/SectionTitle";
 
 export function HowItWorks() {
   return (
     <section className="relative z-10 max-w-6xl" id="how-it-works">
-      <motion.div
-        initial={{ opacity: 0, y: 12 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-        className="flex items-center gap-3 mb-6"
-      >
-        <span className="w-5 h-px bg-orange-400" />
-        <span className="text-[11px] font-semibold text-orange-400 uppercase tracking-widest">
-          How it works
-        </span>
-      </motion.div>
-
-      <motion.h2
-        initial={{ opacity: 0, y: 12 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
-        className="text-3xl font-bold tracking-tight text-white/85 leading-tight mb-20 max-w-sm"
-      >
-        Up and running
-        <br />
-        <span className="text-zinc-500">in three steps.</span>
-      </motion.h2>
+      <SectionIntro title="How it works" />
+      <SectionHeader primary="Up and running" secondary="in three steps." />
 
       <div className="relative flex flex-col lg:flex-row gap-0">
         {steps.map((step, i) => (
