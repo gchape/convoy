@@ -1,8 +1,6 @@
-import type { MenuEntry, Plan, Shape } from "../types";
-
 export const navlinks = [
   { label: "About", to: "/about" },
-  { label: "Contact", to: "/contact" },
+  { label: "Contact Us", to: "/contact-us" },
   { label: "Sign in", to: "/sign-in" },
 ];
 

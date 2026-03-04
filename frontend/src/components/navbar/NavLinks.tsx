@@ -1,7 +1,7 @@
 "use client";
 import { NavLink } from "react-router";
-import { navlinks } from "../constants";
 import { useUser } from "../../features/context/UserContext";
+import { navlinks } from "../constants";
 
 export default function NavLinks() {
   const user = useUser();
@@ -16,13 +16,7 @@ export default function NavLinks() {
           <li key={label}>
             <NavLink
               to={to}
-              className={({ isActive }) =>
-                `nav-underline relative px-3 py-1.5 text-sm font-["Bricolage_Grotesque",sans-serif] font-semibold tracking-widest rounded-t-md transition-colors duration-150 ${
-                  isActive
-                    ? "text-orange-400"
-                    : "text-zinc-400 hover:text-zinc-100 hover:bg-white/5"
-                }`
-              }
+              className='nav-underline relative px-3 py-1.5 text-sm font-["Bricolage_Grotesque",sans-serif] tracking-widest rounded-t-md transition-colors duration-150 text-zinc-400 hover:text-zinc-100 hover:bg-white/5 [&.active]:text-orange-400'
             >
               {label}
             </NavLink>

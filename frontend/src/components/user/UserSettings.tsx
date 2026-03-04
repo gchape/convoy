@@ -1,6 +1,6 @@
 import { Link } from "react-router";
-import { items } from "../constants";
 import { useUser } from "../../features/context/UserContext";
+import { items } from "../constants";
 
 const UserSettings = () => {
   const { currentUser } = useUser();

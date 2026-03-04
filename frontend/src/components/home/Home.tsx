@@ -1,4 +1,5 @@
 "use client";
+import Footer from "../footer/Footer";
 import Hero from "../hero/Hero";
 import { HowItWorks } from "../section/HowItWorks";
 import { Pricing } from "../section/Pricing";
@@ -6,15 +7,20 @@ import { Services } from "../section/Services";
 import ScrollRings from "./ScrollRings";
 
 const Home = () => (
-  <div className="flex flex-col mx-4 border-l-2 border-l-white/8 border-r-2 border-r-white/6 border-dashed">
-    <div className="flex flex-col py-24 px-4 lg:px-12 gap-6 justify-center items-start">
+  <div className="flex flex-col">
+    <div className="flex flex-col place-items-center gap-8 py-24 px-10 font-[Bricolage_Grotesque,sans-serif]">
       <Hero />
       <ScrollRings />
     </div>
-    <div className="flex flex-col justify-around gap-24 lg:gap-24 pb-10 px-5 lg:px-12">
+
+    <div className="flex flex-col place-items-center gap-24 px-10">
       <Services />
       <HowItWorks />
       <Pricing />
+    </div>
+
+    <div className="flex grow pt-24">
+      <Footer />
     </div>
   </div>
 );

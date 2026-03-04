@@ -85,7 +85,7 @@ const RegisterForm = () => (
       </p>
     </div>
 
-    <label className="flex items-start gap-2.5 text-[12px] text-zinc-500 cursor-pointer mb-7">
+    <label className="flex items-start gap-2.5 text-xs text-zinc-500 cursor-pointer mb-7">
       <input
         required
         defaultChecked
@@ -107,7 +107,7 @@ const RegisterForm = () => (
 
     <button
       type="submit"
-      className="w-full h-10.5 bg-orange-400 text-zinc-950 text-[12px] font-bold uppercase tracking-widest rounded-[9px] cursor-pointer transition-all duration-150 hover:opacity-90 hover:shadow-[0_0_20px_rgba(251,146,60,0.3)]"
+      className="w-full h-10.5 bg-orange-400 text-zinc-950 text-xs font-bold uppercase tracking-wider rounded-[9px] cursor-pointer transition-all duration-150 hover:opacity-90 hover:shadow-[0_0_20px_rgba(251,146,60,0.3)]"
     >
       Create account
     </button>

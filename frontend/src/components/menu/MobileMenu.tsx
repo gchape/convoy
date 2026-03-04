@@ -1,7 +1,7 @@
 "use client";
 import { NavLink } from "react-router";
 import { navlinks } from "../constants";
-import { FaArrowRight } from "react-icons/fa";
+import { FaChevronRight } from "react-icons/fa6";
 
 export default function MobileMenu() {
   return (
@@ -10,17 +10,10 @@ export default function MobileMenu() {
         <NavLink
           to={to}
           key={label}
-          className={({ isActive }) =>
-            [
-              "flex items-center justify-between text-xs font-semibold tracking-widest py-3 border-b border-white/5 no-underline last:border-b-0 transition-colors duration-150",
-              isActive
-                ? "text-orange-400"
-                : "text-zinc-400 hover:text-zinc-100",
-            ].join(" ")
-          }
+          className="flex items-center justify-between text-xs font-semibold tracking-widest py-3 border-b border-white/5 no-underline last:border-b-0 transition-colors duration-150 text-zinc-400 hover:text-zinc-100 [&.active]:text-orange-400"
         >
           {label}
-          <FaArrowRight />
+          <FaChevronRight />
         </NavLink>
       ))}
     </div>

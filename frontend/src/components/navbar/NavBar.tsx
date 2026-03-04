@@ -1,13 +1,13 @@
 "use client";
 import { Outlet } from "react-router";
-import Logo from "../logo/Logo.tsx";
-import NavLinks from "./NavLinks.tsx";
-import UserMenu from "../user/UserMenu.tsx";
-import BurgerMenu from "../menu/Burger.tsx";
 import { useUser } from "../../features/context/UserContext.tsx";
+import Logo from "../logo/Logo.tsx";
+import Burger from "../menu/Burger.tsx";
+import UserMenu from "../user/UserMenu.tsx";
+import NavLinks from "./NavLinks.tsx";
 
 const Logo_ = () => <Logo />;
-const BurgerMenu_ = () => <BurgerMenu />;
+const BurgerMenu_ = () => <Burger />;
 
 export default function NavBar() {
   const user = useUser();

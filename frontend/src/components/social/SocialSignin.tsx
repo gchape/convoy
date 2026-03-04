@@ -1,6 +1,6 @@
 import type React from "react";
 
-const SocialButton = ({
+const SocialSignin = ({
   icon,
   title,
 }: {
@@ -13,4 +13,4 @@ const SocialButton = ({
   </button>
 );
 
-export default SocialButton;
+export default SocialSignin;

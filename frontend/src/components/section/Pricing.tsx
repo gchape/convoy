@@ -9,7 +9,12 @@ export function Pricing() {
   return (
     <section id="pricing" className="relative z-10 max-w-6xl scroll-mt-20">
       <SectionIntro title="Pricing" />
-      <SectionHeader primary="Two simple models," secondary="you choose." />
+
+      <SectionHeader
+        primary="Two simple models,"
+        secondary="you choose."
+        margin={4}
+      />
 
       <motion.p
         initial={{ opacity: 0, y: 12 }}
@@ -24,7 +29,7 @@ export function Pricing() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {plans.map((plan, index) => (
-          <PricingCard plan={plan} index={index} />
+          <PricingCard plan={plan} key={plan.id} index={index} />
         ))}
       </div>
     </section>

@@ -8,6 +8,7 @@ export function Services() {
   return (
     <section id="services" className="relative z-10 max-w-6xl scroll-mt-20">
       <SectionIntro title="Services" />
+
       <SectionHeader
         primary="Everything your delivery company needs,"
         secondary="nothing it doesn't."

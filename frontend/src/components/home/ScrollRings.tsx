@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "motion/react";
+import { FaChevronDown } from "react-icons/fa";
 import { rings } from "../constants";
 
 const scroll = (id: string) => {
@@ -37,42 +38,18 @@ const ScrollRings = () => (
             style={{ boxShadow: "0 0 6px rgba(251,146,60,0.6)" }}
           />
 
-          <svg
-            className="absolute inset-0 w-full h-full"
-            viewBox="0 0 40 40"
-            fill="none"
-          >
-            <motion.circle
-              cx="20"
-              cy="20"
-              r="17"
-              stroke="rgba(251,146,60,0.2)"
-              strokeWidth="1"
-              strokeDasharray="12 54"
-              animate={{ rotate: [0, 360] }}
-              transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-              style={{ transformOrigin: "20px 20px" }}
-            />
-          </svg>
+          <motion.span
+            className="absolute inset-0 rounded-full border border-dashed border-orange-400/20"
+            animate={{ rotate: 360 }}
+            transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+          />
 
-          <svg
-            className="absolute bottom-0.5 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-            width="8"
-            height="5"
-            viewBox="0 0 8 5"
-            fill="none"
-          >
-            <path
-              d="M1 1l3 3 3-3"
-              stroke="#fb923c"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
+          <span className="absolute bottom-0.5 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+            <FaChevronDown size={8} color="#fb923c" />
+          </span>
         </div>
 
-        <span className="text-[12px] font-semibold tracking-widest text-zinc-500 group-hover:text-zinc-100 transition-colors duration-150">
+        <span className="text-xs font-semibold tracking-widest text-zinc-500 group-hover:text-zinc-100 transition-colors duration-150">
           {ring.label}
         </span>
       </motion.button>

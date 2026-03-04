@@ -1,5 +1,4 @@
 import React from "react";
-import type { User } from "../../types";
 
 type UserAction = { type: "SET"; payload: User } | { type: "RESET" };
 

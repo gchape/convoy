@@ -1,9 +1,11 @@
 "use client";
+import { AnimatePresence, motion } from "motion/react";
 import React from "react";
 import { createPortal } from "react-dom";
+import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
 import MobileMenu from "./MobileMenu";
 
-export default function BurgerMenu() {
+export default function Burger() {
   const [isOpen, setOpen] = React.useState<boolean>(false);
 
   return (
@@ -12,26 +14,23 @@ export default function BurgerMenu() {
       aria-expanded={isOpen}
       aria-label={isOpen ? "Close menu" : "Open menu"}
       onClick={() => setOpen((prev) => !prev)}
-      className="md:hidden flex flex-col justify-center p-2 border border-white/10 rounded-lg bg-transparent cursor-pointer transition-colors duration-150 hover:border-orange-400/30"
-      style={{ gap: 5 }}
+      className="md:hidden relative flex items-center justify-center p-2 border border-white/10 rounded-lg bg-transparent cursor-pointer transition-colors duration-150 hover:border-orange-400/30"
     >
-      {[
-        "translateY(7px) rotate(45deg)",
-        "scaleX(0)",
-        "translateY(-7px) rotate(-45deg)",
-      ].map((transform, i) => (
-        <span
-          key={i}
-          className="block rounded-sm transition-all duration-200"
-          style={{
-            width: 18,
-            height: 2,
-            transform: isOpen ? transform : "none",
-            opacity: i === 1 && isOpen ? 0 : 1,
-            background: isOpen ? "#fb923c" : "rgba(244,244,245,.6)",
-          }}
-        />
-      ))}
+      <AnimatePresence mode="wait" initial={false}>
+        <motion.span
+          key={isOpen ? "close" : "open"}
+          initial={{ opacity: 0, rotate: -90, scale: 0.8 }}
+          animate={{ opacity: 1, rotate: 0, scale: 1 }}
+          exit={{ opacity: 0, rotate: 90, scale: 0.8 }}
+          transition={{ duration: 0.15 }}
+        >
+          {isOpen ? (
+            <RxCross2 size={18} color="#fb923c" />
+          ) : (
+            <RxHamburgerMenu size={18} color="rgba(244,244,245,.6)" />
+          )}
+        </motion.span>
+      </AnimatePresence>
 
       {isOpen && createPortal(<MobileMenu />, document.querySelector("nav")!)}
     </button>
