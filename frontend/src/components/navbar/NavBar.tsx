@@ -1,16 +1,17 @@
 "use client";
 import { Outlet } from "react-router";
-import { useUser } from "../../features/context/UserContext.tsx";
+import { useUserStore } from "../../store/userStore.ts";
 import Logo from "../logo/Logo.tsx";
 import Burger from "../menu/Burger.tsx";
 import UserMenu from "../user/UserMenu.tsx";
 import NavLinks from "./NavLinks.tsx";
 
 const Logo_ = () => <Logo />;
+const NavLinks_ = () => <NavLinks />;
 const BurgerMenu_ = () => <Burger />;
 
 export default function NavBar() {
-  const user = useUser();
+  const user = useUserStore((state) => state.user);
 
   return (
     <div>
@@ -22,8 +23,10 @@ export default function NavBar() {
             <Logo_ />
 
             <div className="flex items-center gap-2.5">
-              <NavLinks />
-              {user.currentUser && <UserMenu user={user.currentUser} />}
+              <NavLinks_ />
+
+              {user && <UserMenu />}
+
               <BurgerMenu_ />
             </div>
           </div>

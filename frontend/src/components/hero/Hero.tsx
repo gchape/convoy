@@ -1,4 +1,3 @@
-"use client";
 import { motion } from "motion/react";
 import { shapes } from "../constants";
 import Figure from "./Figure";

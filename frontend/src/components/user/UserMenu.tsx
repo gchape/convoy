@@ -1,7 +1,10 @@
 import React from "react";
+import { useUserStore } from "../../store/userStore";
 import UserSettings from "./UserSettings";
 
-export default function UserMenu({ user }: { user: User }) {
+export default function UserMenu() {
+  const user = useUserStore((state) => state.user);
+
   const [open, setOpen] = React.useState<boolean>(false);
 
   return (
@@ -10,10 +13,10 @@ export default function UserMenu({ user }: { user: User }) {
         onClick={() => setOpen((prev) => !prev)}
         className="flex items-center gap-2 pl-3 pr-2 py-1 rounded-full border border-white/10 bg-zinc-900 cursor-pointer transition-colors duration-150 hover:border-orange-400/30 hover:bg-orange-400/5"
       >
-        <span className="hidden sm:block text-zinc-400">{user.shortName}</span>
+        <span className="hidden sm:block text-zinc-400">{user!.shortName}</span>
 
         <div className="w-7 h-7 rounded-full flex items-center justify-center text-[12px] text-zinc-900 select-none shrink-0 bg-linear-to-br from-[#FF5C1A] to-[#FFAA00]">
-          {user.initials}
+          {user!.initials}
         </div>
 
         <svg
@@ -30,7 +33,7 @@ export default function UserMenu({ user }: { user: User }) {
         </svg>
       </button>
 
-      {open && <UserSettings />}
+      {open && <UserSettings user={user!} />}
     </div>
   );
 }

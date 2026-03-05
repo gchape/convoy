@@ -1,7 +1,6 @@
 export const navlinks = [
   { label: "About", to: "/about" },
   { label: "Contact Us", to: "/contact-us" },
-  { label: "Sign in", to: "/sign-in" },
 ];
 
 export const rings = [

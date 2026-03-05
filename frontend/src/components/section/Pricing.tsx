@@ -1,4 +1,3 @@
-"use client";
 import { motion } from "motion/react";
 import PricingCard from "../card/PricingCard";
 import { plans } from "../constants";

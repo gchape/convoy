@@ -1,4 +1,3 @@
-"use client";
 import { motion } from "motion/react";
 import { steps } from "../constants";
 import SectionIntro from "./components/SectionIntro";

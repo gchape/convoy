@@ -1,7 +1,6 @@
-"use client";
+import { FaChevronRight } from "react-icons/fa6";
 import { NavLink } from "react-router";
 import { navlinks } from "../constants";
-import { FaChevronRight } from "react-icons/fa6";
 
 export default function MobileMenu() {
   return (

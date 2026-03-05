@@ -1,4 +1,3 @@
-"use client";
 import { motion } from "motion/react";
 import { FaChevronDown } from "react-icons/fa";
 import { rings } from "../constants";
@@ -9,7 +8,7 @@ const scroll = (id: string) => {
     ?.scrollIntoView({ behavior: "smooth", block: "center" });
 };
 
-const ScrollRings = () => (
+const Rings = () => (
   <div className="relative z-10 max-w-6xl flex items-center gap-5">
     {rings.map((ring, i) => (
       <motion.button
@@ -57,4 +56,4 @@ const ScrollRings = () => (
   </div>
 );
 
-export default ScrollRings;
+export default Rings;

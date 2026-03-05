@@ -1,18 +1,15 @@
 import { Link } from "react-router";
-import { useUser } from "../../features/context/UserContext";
 import { items } from "../constants";
 
-const UserSettings = () => {
-  const { currentUser } = useUser();
-
+const UserSettings = ({ user }: { user: User }) => {
   return (
     <div
       className="dropdown-enter tracking-wide absolute top-[calc(100%+10px)] right-0 w-56 rounded-xl border border-white/10 bg-zinc-900 overflow-hidden z-50"
       style={{ boxShadow: "0 20px 60px rgba(0,0,0,.6)" }}
     >
       <div className="px-4 py-3 border-b border-white/10 bg-orange-400/5">
-        <p className="text-[14px] text-zinc-100">{currentUser?.name}</p>
-        <p className="text-[12px] text-zinc-500 mt-0.5">{currentUser?.email}</p>
+        <p className="text-[14px] text-zinc-100">{user.name}</p>
+        <p className="text-[12px] text-zinc-500 mt-0.5">{user.email}</p>
       </div>
 
       <div className="p-1.5">
