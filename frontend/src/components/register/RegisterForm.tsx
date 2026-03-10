@@ -94,11 +94,11 @@ const RegisterForm = () => (
       />
 
       <span>
-        I agree to the{" "}
+        I agree to the
         <Link to="/terms" className="text-orange-400 hover:underline">
           Terms of Service
-        </Link>{" "}
-        and{" "}
+        </Link>
+        and
         <Link to="/privacy" className="text-orange-400 hover:underline">
           Privacy Policy
         </Link>

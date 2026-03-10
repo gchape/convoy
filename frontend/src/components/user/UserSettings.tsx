@@ -1,10 +1,10 @@
 import { Link } from "react-router";
-import { items } from "../constants";
+import { MENU_ITEMS } from "../constants";
 
 const UserSettings = ({ user }: { user: User }) => {
   return (
     <div
-      className="dropdown-enter tracking-wide absolute top-[calc(100%+10px)] right-0 w-56 rounded-xl border border-white/10 bg-zinc-900 overflow-hidden z-50"
+      className="animate-[dropdown-in_0.18s_cubic-bezier(0.16,1,0.3,1)_forwards] origin-top-right tracking-wide absolute top-[calc(100%+10px)] right-0 w-56 rounded-xl border border-white/10 bg-zinc-900 overflow-hidden z-50"
       style={{ boxShadow: "0 20px 60px rgba(0,0,0,.6)" }}
     >
       <div className="px-4 py-3 border-b border-white/10 bg-orange-400/5">
@@ -13,7 +13,7 @@ const UserSettings = ({ user }: { user: User }) => {
       </div>
 
       <div className="p-1.5">
-        {items.map((entry, index) =>
+        {MENU_ITEMS.map((entry, index) =>
           "sep" in entry ? (
             <div key={index} className="my-1.5 h-px bg-white/10" />
           ) : (

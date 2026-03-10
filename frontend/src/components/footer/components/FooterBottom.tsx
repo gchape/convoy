@@ -1,4 +1,9 @@
-import { FaFacebook, FaGithub, FaLinkedinIn } from "react-icons/fa6";
+import {
+  faFacebook,
+  faGithub,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const FooterBottom = () => (
   <div className="border-t border-zinc-800 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
@@ -7,16 +12,16 @@ const FooterBottom = () => (
     </p>
 
     <div className="flex items-center gap-4">
-      <a href="#">
-        <FaGithub />
+      <a href="#" aria-label="GitHub">
+        <FontAwesomeIcon icon={faGithub} />
       </a>
 
-      <a href="#">
-        <FaFacebook />
+      <a href="#" aria-label="Facebook">
+        <FontAwesomeIcon icon={faFacebook} />
       </a>
 
-      <a href="#">
-        <FaLinkedinIn />
+      <a href="#" aria-label="LinkedIn">
+        <FontAwesomeIcon icon={faLinkedin} />
       </a>
     </div>
   </div>

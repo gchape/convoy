@@ -1,8 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap");
-
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("./assets/fonts/BricolageGrotesque.ttf") format("truetype");
+  font-weight: 400 700;
+  font-display: swap;
+}
 
 html {
   scrollbar-width: none;
@@ -14,6 +17,7 @@ body {
   width: 100vw;
   min-height: 100vh;
   cursor: default;
+  font-family: "Bricolage Grotesque", sans-serif;
   background-color: #09090b;
   background-image: radial-gradient(
     circle,
@@ -137,9 +141,4 @@ body::after {
     opacity: 1;
     transform: translateY(0) scale(1);
   }
-}
-
-.dropdown-enter {
-  animation: dropdown-in 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  transform-origin: top right;
 }

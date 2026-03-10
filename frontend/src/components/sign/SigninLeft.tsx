@@ -1,4 +1,5 @@
-import { FaFacebook, FaGoogle } from "react-icons/fa6";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router";
 import Logo from "../logo/Logo";
 import LeftPanelBg from "../panel/LeftPanelBg";
@@ -43,8 +44,14 @@ const SigninLeft = () => (
       </div>
 
       <div className="grid grid-cols-2 gap-2.5">
-        <SocialSignin icon={<FaFacebook />} title={"facebook"} />
-        <SocialSignin icon={<FaGoogle />} title={"google"} />
+        <SocialSignin
+          icon={<FontAwesomeIcon icon={faFacebook} />}
+          title={"facebook"}
+        />
+        <SocialSignin
+          icon={<FontAwesomeIcon icon={faGoogle} />}
+          title={"google"}
+        />
       </div>
     </div>
   </div>

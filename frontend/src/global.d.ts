@@ -1,5 +1,4 @@
 // src/global-types.d.ts
-import type { TargetAndTransition, Transition } from "motion";
 import * as React from "react";
 
 declare global {
@@ -22,20 +21,6 @@ declare global {
     shortName: string;
   };
 
-  interface Shape {
-    id: string;
-    type: "rect" | "circle" | "plus";
-    style: Record<string, string | number>;
-    animate: TargetAndTransition;
-    transition: Transition;
-    stroke: string;
-    fill?: string;
-    strokeWidth: number;
-    strokeDasharray?: string;
-  }
-
-  type Feature = Array<string>;
-
   type Plan = {
     id: string;
     name: string;
@@ -43,7 +28,7 @@ declare global {
     period: string | null;
     description: string;
     highlight: boolean;
-    features: Feature;
+    features: string[];
   };
 }
 

@@ -1,20 +1,12 @@
-import { motion } from "motion/react";
-import { FaCheck } from "react-icons/fa6";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PricingButton from "./PricingButton";
 
-const PricingCard = ({ plan, index }: { plan: Plan; index: number }) => {
+const PricingCard = ({ plan }: { plan: Plan; index: number }) => {
   const highlighted = plan.highlight;
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{
-        duration: 0.5,
-        delay: index * 0.08,
-        ease: [0.16, 1, 0.3, 1],
-      }}
+    <div
       className={`relative flex flex-col rounded-xl border p-7 transition-all duration-200 ${
         highlighted
           ? "bg-orange-400/4 border-orange-400/25 shadow-[0_0_40px_rgba(251,146,60,0.08)]"
@@ -55,7 +47,7 @@ const PricingCard = ({ plan, index }: { plan: Plan; index: number }) => {
             key={f}
             className="flex items-center gap-2.5 text-[13px] text-zinc-400"
           >
-            <FaCheck />
+            <FontAwesomeIcon icon={faCheck} />
             {f}
           </li>
         ))}
@@ -67,7 +59,7 @@ const PricingCard = ({ plan, index }: { plan: Plan; index: number }) => {
       >
         {plan.id === "enterprise" ? "Contact us" : "Get started"}
       </PricingButton>
-    </motion.div>
+    </div>
   );
 };
 

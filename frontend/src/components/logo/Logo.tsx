@@ -20,7 +20,7 @@ export default function Logo({ clickable = true }: { clickable?: boolean }) {
         />
       </svg>
 
-      <span className="text-2xl font-[Black_Ops_One,system-ui] uppercase text-zinc-100">
+      <span className="text-2xl font-extrabold uppercase text-zinc-100">
         Convoy
       </span>
     </a>

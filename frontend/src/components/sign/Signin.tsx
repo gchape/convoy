@@ -5,7 +5,7 @@ import SigninLeft from "./SigninLeft";
 const SigninRight = () => <RightPanel />;
 
 const Signin = () => (
-  <div className="flex w-screen min-h-screen lg:h-screen lg:overflow-hidden font-[Syne,sans-serif]">
+  <div className="flex w-screen min-h-screen lg:h-screen lg:overflow-hidden">
     <SigninLeft />
     <SigninRight />
   </div>

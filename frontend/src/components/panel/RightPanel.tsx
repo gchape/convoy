@@ -1,10 +1,10 @@
-import RightPanelImage from "../../assets/6169060.jpg";
+import RightPanelImage from "../../assets/6169060.webp";
 
 const RightPanel = () => (
   <div className="relative flex-1 hidden lg:inline-block overflow-hidden">
     <img
       src={RightPanelImage}
-      alt="Office"
+      alt="Delivery truck"
       loading="lazy"
       className="w-full h-full object-cover brightness-75 saturate-50"
     />
